@@ -7,3 +7,25 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Ignore local configuration files
+.env
+*.local
+
+# Ignore IDE specific files
+.vscode/
+.github/
+
+# Ignore build and log files
+logs/
+*.log
+
+# Ignore temporary files
+*.tmp
+*.bak
+
+# Ignore files to be excluded
+.prettierrc.json
+.theme-check.yml
+README.md
+release-notes.md
