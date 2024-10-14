@@ -53,12 +53,6 @@
                 | replace: '<img ', '<img loading="lazy" hidden '
               }}
 
-              {%- style -%}
-                .image-with-text__media video {
-                  object-position: {{ section.settings.object_position }};
-                }
-              {%- endstyle -%}
-
             {%- elsif section.settings.media_type == 'image' and section.settings.image != blank -%}
               {%- if section.settings.image_behavior == 'ambient' or section.settings.image_behavior == 'zoom-in' -%}
                 {%- assign widths = '198, 432, 642, 900, 1284, 1800' -%}
@@ -553,3 +547,10 @@
   ]
 }
 {% endschema %}
+
+
+{%- style -%}
+  .image-with-text__media video {
+    object-position: {{ section.settings.object_position }};
+  }
+{%- endstyle -%}
