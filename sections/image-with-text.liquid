@@ -1,4 +1,4 @@
-{{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
+{{ 'component-image-with-text.min.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -76,8 +76,9 @@
               {{
                 section.settings.image
                 | image_url: width: 1500
-                | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority
+                | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority, loading: 'lazy'
               }}
+
             {%- else -%}
               {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
             {%- endif -%}
