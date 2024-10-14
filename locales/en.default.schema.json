@@ -1347,8 +1347,17 @@
     "image-with-text": {
       "name": "Image with text",
       "settings": {
+        "media_type": {
+          "label": "Media Type"
+        },
         "image": {
           "label": "Image"
+        },
+        "object_position": {
+          "label": "Video position",
+          "option_1": "Left",
+          "option_2": "Center",
+          "option_3": "Right",
         },
         "height": {
           "options__1": {

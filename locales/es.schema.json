@@ -1191,8 +1191,17 @@
     "image-with-text": {
       "name": "Imagen con texto",
       "settings": {
+        "media_type": {
+          "label": "Tipo de Medio"
+        },
         "image": {
           "label": "Imagen"
+        },
+        "object_position": {
+          "label": "Posición del video",
+          "option_1": "Izquierda",
+          "option_2": "Centro",
+          "option_3": "Derecha",
         },
         "height": {
           "options__1": {
