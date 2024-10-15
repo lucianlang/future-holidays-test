@@ -11,6 +11,12 @@
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
+    .image-with-text__media video {
+    object-position: {{ section.settings.object_position }};
+    {% if section.settings.height == 'adapt' and section.settings.video != blank %}
+    padding-bottom: {{ 1 | divided_by: section.settings.video.aspect_ratio | times: 100 }}%;
+            {% endif %}
+    }
   }
 {%- endstyle -%}
 
@@ -547,10 +553,3 @@
   ]
 }
 {% endschema %}
-
-
-{%- style -%}
-  .image-with-text__media video {
-    object-position: {{ section.settings.object_position }};
-  }
-{%- endstyle -%}
