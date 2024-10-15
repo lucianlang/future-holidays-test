@@ -11,12 +11,9 @@
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
-    .image-with-text__media video {
+  }  
+  .image-with-text__media video {
     object-position: {{ section.settings.object_position }};
-    {% if section.settings.height == 'adapt' and section.settings.video != blank %}
-    padding-bottom: {{ 1 | divided_by: section.settings.video.aspect_ratio | times: 100 }}%;
-            {% endif %}
-    }
   }
 {%- endstyle -%}
 
@@ -54,8 +51,8 @@
                   loading: 'lazy',
                   poster: '',
                   style: 'width: 100%;
-  height: 100%;
-  object-fit: cover;'
+                    height: 100%;
+                    object-fit: cover;'
                 | replace: '<img ', '<img loading="lazy" hidden '
               }}
 
