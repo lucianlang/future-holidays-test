@@ -12,10 +12,14 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }  
-  .image-with-text__media video {
+  #shopify-section-{{ section.id }} .image-with-text__media video {
     object-position: {{ section.settings.object_position }};
   }
 {%- endstyle -%}
+
+<script>
+  console.log('#shopify-section-{{ section.id }}')
+</script>
 
 {%- liquid
   assign fetch_priority = 'auto'
